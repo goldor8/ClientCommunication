@@ -199,7 +199,7 @@ public class Client : MonoBehaviour
     public void HandlePacket(Packet packet)
     {
         int packetID = packet.ReadInt(true);
-        Debug.Log("incomming packet with id : "+packetID);
+        Debug.LogError("incomming packet with id : "+packetID);
         _packetHandlers[packetID](packet);
     }
 
